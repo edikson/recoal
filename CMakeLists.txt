@@ -1,3 +1,4 @@
+# Copyright (c) 2018, Recoal Project
 # Copyright (c) 2014-2017, The Monero Project
 #
 # All rights reserved.
@@ -30,7 +31,7 @@
 
 cmake_minimum_required(VERSION 2.8.7)
 
-project(sumokoin)
+project(recoal)
 
 function (die msg)
   if (NOT WIN32)
