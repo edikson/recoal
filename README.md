@@ -33,7 +33,7 @@ accelerated in the next few years before declined and depleted). However, the em
 
 ## About this Project
 
-This is the core implementation of Recoal. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Sumokoin that uses the protocol and network in a compatible manner.
+This is the core implementation of Recoal. It is open source and completely free to use without restrictions, except for those specified in the license agreement below. There are no restrictions on anyone creating an alternative implementation of Recoal that uses the protocol and network in a compatible manner.
 
 As with many development projects, the repository on Github is considered to be the "staging" area for the latest changes. Before changes are merged into that branch on the main repository, they are tested by individual developers in their own branches, submitted as a pull request, and then subsequently tested by contributors who focus on testing and code reviews. That having been said, the repository should be carefully considered before using it in a production environment, unless there is a patch in the repository for a particular show-stopping issue you are experiencing. It is generally a better idea to use a tagged release for stability.
 
@@ -79,7 +79,7 @@ build the library binary manually. This can be done with the following command `
 
 ### Build instructions
 
-Sumokoin uses the CMake build system and a top-level [Makefile](Makefile) that
+Recoal uses the CMake build system and a top-level [Makefile](Makefile) that
 invokes cmake commands as needed.
 
 #### On Linux and OS X
@@ -104,7 +104,7 @@ invokes cmake commands as needed.
 
 * Add `PATH="$PATH:$HOME/recoal/build/release/bin"` to `.profile`
 
-* Run Sumokoin with `recoald --detach`
+* Run Recoal with `recoald --detach`
 
 * **Optional**: build and run the test suite to verify the binaries:
 
@@ -130,7 +130,7 @@ Tested on a Raspberry Pi 2 with a clean install of minimal Debian Jessie from ht
 
 * `apt-get update && apt-get upgrade` to install all of the latest software
 
-* Install the dependencies for Sumokoin except libunwind and libboost-all-dev
+* Install the dependencies for Recoal except libunwind and libboost-all-dev
 
 * Increase the system swap size:
 ```	
@@ -165,7 +165,7 @@ Tested on a Raspberry Pi 2 with a clean install of minimal Debian Jessie from ht
 
 * Add `PATH="$PATH:$HOME/recoal/build/release/bin"` to `.profile`
 
-* Run Sumokoin with `recoald --detach`
+* Run Recoal with `recoald --detach`
 
 * You may wish to reduce the size of the swap file after the build has finished, and delete the boost directory from your home directory
 
@@ -242,7 +242,7 @@ The doxygen and graphviz packages are optional and require the xbase set.
 The Boost package has a bug that will prevent librpc.a from building correctly. In order to fix this, you will have to Build boost yourself from scratch. Follow the directions here (under "Building Boost"):
 https://github.com/bitcoin/bitcoin/blob/master/doc/build-openbsd.md
 
-You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Sumokoin.
+You will have to add the serialization, date_time, and regex modules to Boost when building as they are needed by Recoal.
 
 To build: `env CC=egcc CXX=eg++ CPP=ecpp DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/path/to/the/boost/you/built make release-static-64`
 
@@ -258,7 +258,7 @@ By default, in either dynamically or statically linked builds, binaries target t
 * ```make release-static-win64``` builds binaries on 64-bit Windows portable across 64-bit Windows systems
 * ```make release-static-win32``` builds binaries on 64-bit or 32-bit Windows portable across 32-bit Windows systems
 
-## Running sumokoind
+## Running recoald
 
 The build places the binary in `bin/` sub-directory within the build directory
 from which cmake was invoked (repository root by default). To run in
@@ -284,7 +284,7 @@ and its home is the data directory specified in the [example
 config](utils/conf/recoald.conf).
 
 If you're on Mac, you may need to add the `--max-concurrency 1` option to
-recoal-wallet-cli, and possibly sumokoind, if you get crashes refreshing.
+recoal-wallet-cli, and possibly recoald, if you get crashes refreshing.
 
 ## Internationalization
 
@@ -306,7 +306,7 @@ TAILS ships with a very restrictive set of firewall rules. Therefore, you need t
 
 `DNS_PUBLIC=tcp torsocks ./recoald --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 --data-dir /home/your/directory/to/the/blockchain`
 
-`./sumo-wallet-cli`
+`./recoal-wallet-cli`
 
 ## Using readline
 
@@ -318,7 +318,7 @@ Note: rlwrap will save things like your seed and private keys, if you supply the
 
 # Debugging
 
-This section contains general instructions for debugging failed installs or problems encountered with Sumokoin. First ensure you are running the latest version built from the github repo.
+This section contains general instructions for debugging failed installs or problems encountered with Recoal. First ensure you are running the latest version built from the github repo.
 
 ## LMDB
 
