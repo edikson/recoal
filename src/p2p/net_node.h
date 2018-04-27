@@ -1,3 +1,4 @@
+// Copyright (c) 2018, Recoal Project
 // Copyright (c) 2014-2016, The Monero Project
 //
 // All rights reserved.
@@ -124,10 +125,9 @@ namespace nodetool
     virtual std::map<uint32_t, time_t> get_blocked_ips() { CRITICAL_REGION_LOCAL(m_blocked_ips_lock); return m_blocked_ips; }
   private:
     const std::vector<std::string> m_seed_nodes_list =
-    { "seeds.sumoseeds.bid"
-    , "seeds.sumoseeds.win"
-    , "seeds.sumoseeds2.bid"
-    , "seeds.sumoseeds2.win"
+    { "seed1.recoal.gq"
+    , "seed2.recoal.gq"
+    , "seed3.recoal.gq"
     };
 
     bool islimitup=false;
