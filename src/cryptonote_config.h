@@ -1,3 +1,4 @@
+// Copyright (c) 2018, Recoal Project
 // Copyright (c) 2017, SUMOKOIN
 // Copyright (c) 2014-2017, The Monero Project
 // 
@@ -119,7 +120,7 @@
 
 #define ALLOW_DEBUG_COMMANDS
 
-#define CRYPTONOTE_NAME                                 "sumokoin"
+#define CRYPTONOTE_NAME                                 "recoal"
 #define CRYPTONOTE_POOLDATA_FILENAME                    "poolstate.bin"
 #define CRYPTONOTE_BLOCKCHAINDATA_FILENAME              "blockchain.bin"
 #define CRYPTONOTE_BLOCKCHAINDATA_TEMP_FILENAME         "blockchain.bin.tmp"
@@ -149,31 +150,28 @@ namespace config
   uint64_t const BASE_REWARD_CLAMP_THRESHOLD = ((uint64_t)100000); // pow(10, 5)
   std::string const P2P_REMOTE_DEBUG_TRUSTED_PUB_KEY = "0000000000000000000000000000000000000000000000000000000000000000";
 
-  uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x2bb39a;  // Sumo
-  uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x29339a; //Sumi
-  uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x8319a; // Subo
-  //uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_SUBADDRESS_BASE58_PREFIX = 0x5b19a; // Subi
-  uint16_t const P2P_DEFAULT_PORT = 19733;
-  uint16_t const RPC_DEFAULT_PORT = 19734;
-
+  uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0xd6; //co
+  uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x3dd5; //ci
+  uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x7b54; //cc
+  uint16_t const P2P_DEFAULT_PORT = 12121;
+  uint16_t const RPC_DEFAULT_PORT = 12122;
   boost::uuids::uuid const NETWORK_ID = { {
-      0x04, 0x06, 0xdf, 0xce, 0xfc, 0x7c, 0x27, 0x4a, 0x24, 0xd4, 0xf3, 0x8d, 0x42, 0x44, 0x60, 0xa8
-    } }; // Bender's nightmare
-  std::string const GENESIS_TX = "023c01ff0001808098d0daf1d00f028be379aa57a70fa19c0ee5765fdc3d2aae0b1034158f4963e157d9042c24fbec21013402fc7071230f1f86f33099119105a7b1f64a898526060ab871e685059c223100";
+      0x40, 0xad, 0x27, 0x8e, 0x4a, 0x33, 0xea, 0x01, 0xb0, 0xaf, 0x4d, 0x35, 0x3c, 0xf8, 0x1a, 0xd1
+    } };
+  std::string const GENESIS_TX = "013c01ff0001ffffffffffff01029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101806d3a9d42f9a20f946a3d82b4dff2262ef85cae984b57cdb439f3373917064e";
   uint32_t const GENESIS_NONCE = 10000;
 
   namespace testnet
   {
-    uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x37751a; // Suto
-    uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x34f51a; // Suti
-    uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x1d351a; // Susu
-    //uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_SUBADDRESS_BASE58_PREFIX = 0x17b51a; // Susi
-    uint16_t const P2P_DEFAULT_PORT = 29733;
-    uint16_t const RPC_DEFAULT_PORT = 29734;
+    uint64_t const CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 0x4e56; // ct
+    uint64_t const CRYPTONOTE_PUBLIC_INTEGRATED_ADDRESS_BASE58_PREFIX = 0x4ad6; // cti
+    uint64_t const CRYPTONOTE_PUBLIC_SUBADDRESS_BASE58_PREFIX = 0x4cad6; // ctic
+    uint16_t const P2P_DEFAULT_PORT = 22121;
+    uint16_t const RPC_DEFAULT_PORT = 22122;
     boost::uuids::uuid const NETWORK_ID = { {
-        0x12, 0x04, 0x06, 0xdf, 0xce, 0xfc, 0x7c, 0x27, 0x4a, 0x24, 0xd4, 0xf3, 0x8d, 0x42, 0x44, 0x60
-      } }; // Bender's daydream
-    std::string const GENESIS_TX = "023c01ff0001808098d0daf1d00f028d7bbb5a23ab085e05230bd45d938c71f669f94c2a170b96b64827b7bc2cbde521012b6ed837a56ef72f57b4e46410bdea82e382c43ae8797a0f3e8419b5d4f8e6fe00";
+        0x6f, 0x8c, 0x97, 0xce, 0x97, 0xae, 0xf3, 0x3c, 0x16, 0x47, 0x4c, 0xaa, 0xc5, 0x6b, 0x0e, 0xf2
+      } };
+    std::string const GENESIS_TX = "013c01ff0001ffffffffffff01029b2e4c0281c0b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd0880712101338d7059a1e347175437376c2eba40041fa159fd3b7071df66790b753b1030f1";
     uint32_t const GENESIS_NONCE = 10001;
   }
 }
