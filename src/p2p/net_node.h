@@ -129,6 +129,10 @@ namespace nodetool
     , "seed2.recoal.gq"
     , "seed3.recoal.gq"
     , "seed4.recoal.gq"
+    , "seed5.recoal.gq"
+    , "seed6.recoal.gq"
+    , "seed7.recoal.gq"
+    , "seed8.recoal.gq"
     };
 
     bool islimitup=false;
