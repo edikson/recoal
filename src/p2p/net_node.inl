@@ -394,9 +394,14 @@ namespace nodetool
     if (testnet)
     {
       memcpy(&m_network_id, &::config::testnet::NETWORK_ID, 16);
-      full_addrs.insert("91.121.81.92:29733");
-      full_addrs.insert("144.217.164.165:29733");
-      full_addrs.insert("217.182.76.94:29733");
+      full_addrs.insert("seed1.recoal.gq:22121");
+      full_addrs.insert("seed2.recoal.gq:22121");
+      full_addrs.insert("seed3.recoal.gq:22121");
+      full_addrs.insert("seed4.recoal.gq:22121");
+      full_addrs.insert("seed5.recoal.gq:22121");
+      full_addrs.insert("seed6.recoal.gq:22121");
+      full_addrs.insert("seed7.recoal.gq:22121");
+      full_addrs.insert("seed8.recoal.gq:22121");
     }
     else
     {
@@ -464,7 +469,7 @@ namespace nodetool
         if (result.size())
         {
           for (const auto& addr_string : result)
-            full_addrs.insert(addr_string + ":19733");
+            full_addrs.insert(addr_string + ":12121");
         }
         ++i;
       }
